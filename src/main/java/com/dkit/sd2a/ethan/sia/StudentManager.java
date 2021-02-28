@@ -42,6 +42,11 @@ public class StudentManager {
         int caoNumber = kb.nextInt();
 
         Student student = studentMap.get(caoNumber);
+        if(student == null)
+        {
+            return null;
+        }
+
         return new Student(student);
 
     }
@@ -55,7 +60,6 @@ public class StudentManager {
             System.out.println("This student is exist");
         else
             studentMap.put(student.getCaoNumber(),new Student(student));
-
     }
 
 
@@ -84,7 +88,7 @@ public class StudentManager {
 
             while(flag2==false)
             {
-                System.out.print("Input your birth of date like '1900-01-01' : ");
+                System.out.print("Input your birth of date like '1980-01-01' : ");
                 dateBirth = kb.next();
                 flag2 = dateBirth.matches("^((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$");
                 if (flag2==false) System.out.println("You must input valid years and date!");
@@ -137,7 +141,7 @@ public class StudentManager {
 
     public void removeStudentInput()
     {
-        System.out.print("Please input the caoNumber of the student you want to remove. ");
+        System.out.print("Please input the caoNumber of the student you want to remove: ");
         int caoNumber = kb.nextInt();
 
         Student student = studentMap.get(caoNumber);

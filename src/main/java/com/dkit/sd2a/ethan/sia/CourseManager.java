@@ -49,8 +49,10 @@ public class CourseManager {
 
     public Course getCourseInput()
     {
+        String courseId ="";
+
         System.out.print("Please input the courseId of the course you want to find: ");
-        String courseId = kb.next();
+         courseId = kb.nextLine();
 
         Course course = courseMap.get(courseId);
         if(course==null)
@@ -85,9 +87,9 @@ public class CourseManager {
 
         while(flag2==false)
         {
-            System.out.print("Input your level here like 'Level 08': ");
+            System.out.print("Input your level here like 'Level08': ");
             level = kb.next();
-            flag2 = level.matches("^(?=.*[L])(?=.*[e])(?=.*[v])(?=.*[e])(?=.*[l])(?=.*[0-9]*$).{8}$");
+            flag2 = level.matches("^(?=.*[L])(?=.*[e])(?=.*[v])(?=.*[e])(?=.*[l])(?=.*[0-9]*$).{7}$");
             if (flag2==false)
             {
                 System.out.println("You must input exactly same way like the example above but you can change the numeric range from 06 to 10!");
@@ -98,7 +100,7 @@ public class CourseManager {
         {
             System.out.print("Please enter your the title like 'Computing and Operating system' : ");
             title = kb.next();
-            flag3 = title.matches("^[A-Z]{1,}[\\.]{0,1}[A-Za-z\\s]{2,60}$");
+            flag3 = title.matches("^[A-Za-z].{2,60}$");
             if (flag3 ==false)
             {
                 System.out.println("You first word's first letter must be upperCase letter and not longer than 60 characters ");
@@ -112,16 +114,16 @@ public class CourseManager {
         {
             System.out.print("Input the institute name like 'Dundalk Institute of Technology' : ");
             institution = kb.next();
-            flag4 = institution.matches("^[A-Z]{1,}[\\.]{0,1}[A-Za-z\\s]{2,100}$");
+            flag4 = institution.matches("^(?=.*[A-Za-z]*$).{2,100}$");
             if (flag4 ==false) System.out.println("You first word's first letter must be Upper Case and not longer that 100 characters");
         }
 
-        Course c = new Course(courseID,level,title,institution);
+        Course course = new Course(courseID,level,title,institution);
 
-        if(c==null)
+        if(course==null)
             throw new IllegalArgumentException();
         else
-            courseMap.put(c.getCourseId(),new Course(c));
+            courseMap.put(course.getCourseId(),new Course(course));
     }
 
     public void addCourse(Course c)

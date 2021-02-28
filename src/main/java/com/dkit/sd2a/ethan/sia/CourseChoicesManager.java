@@ -127,13 +127,13 @@ public class CourseChoicesManager {
         String dateBirth ="";
         String password ="";
 
-        System.out.print("Input your caoNumber with 6 digits: ");
+        System.out.print("Input your caoNumber");
         input = kb.nextInt();
 
-        System.out.print("Input your birth of date like '1900-01-01' : ");
+        System.out.print("Input your birth of date like '1980-01-01' : ");
         dateBirth = kb.next();
 
-        System.out.print("Please enter your password like '12345Ab#' : ");
+        System.out.print("Please enter your password like: ");
         password = kb.next();
 
         try
