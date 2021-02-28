@@ -1,5 +1,10 @@
 package com.dkit.sd2a.ethan.sia;
 
+/**
+ *D00225319
+ *Ethan Alexandro Yiik Hee Sia
+ */
+
 public class Student {
     private int caoNumber;  // In the CAO system, cao number is unique identifier for student
     private String dateOfBirth; // yyyy-mm-dd

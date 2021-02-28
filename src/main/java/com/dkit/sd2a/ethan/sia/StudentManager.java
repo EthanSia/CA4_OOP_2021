@@ -1,7 +1,10 @@
 package com.dkit.sd2a.ethan.sia;
 // StudentManager encapsulates the storage and ability
 // to manipulate student objects
-
+/**
+ *D00225319
+ *Ethan Alexandro Yiik Hee Sia
+ */
 
 import java.io.*;
 import java.util.*;

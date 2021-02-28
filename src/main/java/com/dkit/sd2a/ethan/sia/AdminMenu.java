@@ -1,5 +1,10 @@
 package com.dkit.sd2a.ethan.sia;
 
+/**
+ *D00225319
+ *Ethan Alexandro Yiik Hee Sia
+ */
+
 public enum AdminMenu
 {
     ADD_COURSE,

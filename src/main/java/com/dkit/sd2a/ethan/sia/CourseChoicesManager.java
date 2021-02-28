@@ -1,14 +1,9 @@
 package com.dkit.sd2a.ethan.sia;
 
-// Stores all student CAO choices.
-// Allows student to make course choices, save them and update them later.
-//
-// emphasis on speed of access when multiple users are accessing this at same time
-//
-// This component would interact with a Network component that would, in turn, send
-// data over the internet to a web client.
-//
-// Clone all received and returned objects - encapsulation
+/**
+ *D00225319
+ *Ethan Alexandro Yiik Hee Sia
+ */
 
 import java.io.*;
 import java.util.*;
@@ -16,7 +11,7 @@ import java.util.*;
 public class CourseChoicesManager {
     private static Scanner kb = new Scanner(System.in);
 
-//    private ArrayList<String>list = new ArrayList<>();
+
 
     // reference to constructor injected studentManager
     private StudentManager studentManager;
@@ -24,18 +19,10 @@ public class CourseChoicesManager {
     // reference to constructor injected courseManager
     private CourseManager courseManager;
 
-    // Store all the Course details -  fast access
-//    private HashMap<String,Course> courseDetails= new HashMap<>();
-    // caoNumber, course selection list - for fast access
-    //              caoNumber  list of choices
+
     private HashMap<Integer,List<String>> selectedChoices = new HashMap<>();
 
-    // CourseChoicesManager DEPENDS on both the StudentManager and CourseManager to access
-    // student details and course details.  So, we receive a reference to each via
-    // the constructor.
-    // This is called "Dependency Injection", meaning that we
-    // inject (or pass in) objects that this class requires to do its job.
-    //
+
     CourseChoicesManager(StudentManager studentManager, CourseManager courseManager) {
         this.studentManager = studentManager;
         this.courseManager = courseManager;

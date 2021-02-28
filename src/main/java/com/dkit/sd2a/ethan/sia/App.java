@@ -6,10 +6,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- *
- * Notes:
- *  Synchronisation of multiple reads and writes to file is not considered here.
- *
+ *D00225319
+ *Ethan Alexandro Yiik Hee Sia
  */
 public class App 
 {
